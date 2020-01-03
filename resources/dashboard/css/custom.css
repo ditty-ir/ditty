@@ -1,0 +1,57 @@
+.card {
+    text-align: right;
+}
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    background-position: center left calc(0.375em + 0.1875rem);
+}
+.was-validated .form-control:valid, .form-control.is-valid {
+    background-position: center left calc(0.375em + 0.1875rem);
+}
+
+.main-content {
+    direction: rtl;
+    text-align: right;
+}
+
+body.modal-open .main-content {
+    z-index: 900;
+}
+
+.modal-header .close {
+    margin: 0;
+    padding: 0;
+}
+
+.main-sidebar .sidebar-menu li a i {
+    width: initial;
+}
+
+.form-group {
+    text-align: right;
+}
+
+.z-index-501 {
+    z-index: 501;
+}
+
+.dir-ltr {
+    direction: ltr;
+}
+
+.notifications {
+    left: 0;
+    bottom: 0;
+    top: initial !important;
+    right: initial !important;
+    font-size: 15px !important;
+}
+
+.notifications .notification-content {
+    text-align: right;
+}
+
+.cke_dialog_ui_input_textarea {
+    text-align: left;
+    direction: ltr;
+}

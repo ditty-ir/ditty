@@ -1,0 +1,33 @@
+<IfModule mod_headers.c>
+    # WEEK
+    <FilesMatch "\.(jpg|jpeg|png|ttf|woff|woff2)$">
+        Header set Cache-Control "max-age=2592000, public"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+</IfModule>

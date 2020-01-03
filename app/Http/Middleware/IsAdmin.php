@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Closure;
+use Illuminate\Support\Facades\Auth;
+
+class IsAdmin
+{
+    /**
+     * Handle an incoming request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @return mixed
+     */
+    public function handle($request, Closure $next)
+    {
+        $user = Auth::guard('api')->user();
+
+        if (! empty($user) && $user->IsAdmin()) {
+            return $next($request);
+        } else {
+            abort(401);
+        }
+    }
+}

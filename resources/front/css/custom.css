@@ -1,0 +1,262 @@
+body {
+    text-align: right;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.post-cover-image {
+    max-height: 170px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #c5c5c5;
+}
+
+.listfeaturedtag h2.card-title, .listrecent h2.card-title, h2.card-title {
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.related-post .thumbnail-background {
+    height: 45px;
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+.social-urls a img {
+    width: 24px;
+}
+
+#single-article-sidebar ul li {
+    list-style: none;
+}
+
+.text-red {
+    color: red;
+}
+
+.thumbnail-background {
+    background-position: 50% 22% !important;
+    background-size:cover;
+    height:100%;
+    display:block;
+    background-origin:border-box!important;
+    border-top-left-radius:2px;
+}
+
+blockquote {
+    border-left: none;
+    border-right: 4px solid #00ab6b;
+}
+
+.post-cover-link, .post-citation {
+    margin: 0 !important;
+    text-align: left !important;
+    direction: ltr;
+    word-break: break-word;
+}
+
+.article-post h2 {
+    font-size: 1.85rem;
+    text-align: right !important;
+}
+
+.post-citation a {
+    color: #999;
+    font-size: 14px;
+}
+
+.hljs {
+    direction: ltr;
+    text-align: left;
+    border-radius: 5px;
+}
+.hljs * {
+    font-family: consolas, monospace;
+}
+
+.btn {
+    font-family: Vazir;
+}
+
+.cke_source {
+    direction: ltr;
+}
+
+.notifications {
+    left: 0;
+    bottom: 0;
+    top: initial !important;
+    right: initial !important;
+    font-size: 15px !important;
+}
+
+.notifications .notification-content {
+    text-align: right;
+}
+
+pre {
+    font-size: 72%;
+}
+
+.three-dots {
+    font-size: 20px !important;
+    text-align: center !important;
+    display: block !important;
+    margin-bottom: 1.5rem;
+}
+
+div.three-dots::after {
+    content: '. . .';
+}
+
+div.three-dots p {
+    display: none;
+}
+
+
+.card .post-title {
+    font-size: 1.2em;
+}
+
+.card .post-date {
+    font-size: 14px !important;
+}
+
+.group-posts .group-posts-item {
+    /* padding: 2%; */
+    padding-left: 10px;
+}
+
+.group-posts .group-posts-item .card {
+    height: 370px;
+}
+
+.slick-next i.fa, .slick-prev i.fa {
+    font-size: 20px;
+    color: #999;
+}
+
+.font-consolas {
+    font-family: consolas;
+}
+
+/* for block of numbers */
+.hljs-ln-numbers {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    text-align: center;
+    color: #666666;
+    border-right: 1px dotted #555;
+    vertical-align: top;
+    padding: 1px 10px !important;
+
+    /* your custom style here */
+}
+
+/* for block of code */
+.hljs-ln-code {
+    padding-left: 10px !important;
+}
+
+.hljs-ln td {
+    line-height: 1.8;
+}
+
+.listrecent .card {
+    min-height: 370px;
+}
+
+/* .code {
+    overflow: hidden;
+    padding-top: 56.25%;
+    position: relative;
+}
+*/
+
+.code iframe {
+    border: 0;
+    width: 100%;
+ }
+
+.author-thumb-xs {
+    width: 30px;
+    height: 30px;
+}
+
+.cse .gsc-control-cse, .gsc-control-cse {
+    padding: 0 !important;
+}
+
+.gsc-input {
+    direction: rtl;
+}
+
+.article-post p {
+    text-align: justify;
+}
+
+#search-box.collapsing {
+    -webkit-transition: none;
+    transition: none;
+    display: none;
+}
+
+.search-button {
+    left: 0;
+}
+
+div#post-comments p.text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: inherit;
+}
+
+@media (max-width:991.98px) {
+    .navbar-collapse .nav-item {
+        margin-bottom: 15px;
+    }
+    .topnav {
+        padding-bottom: 15px;
+    }
+
+    .navbar.user {
+        text-align: center;
+        display: block;
+        width: 200px;
+        margin: auto;
+    }
+
+    .search-button {
+        left: 55px !important;
+        top: 6px;
+    }
+
+    .article-post {
+        font-size: 1.05rem;
+    }
+
+    .article-post h2 {
+        font-size: 1.85rem;
+    }
+
+    .mainheading h1.posttitle {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width:991.98px) {
+    #search-box {
+        margin-top: -2px;
+    }
+}
