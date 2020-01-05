@@ -75,6 +75,7 @@ blockquote {
     direction: ltr;
     text-align: left;
     border-radius: 5px;
+    background: #fff6d3 !important;
 }
 .hljs * {
     font-family: consolas, monospace;

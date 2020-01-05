@@ -44,7 +44,7 @@
     },
     "dependencies": {
         "autotrack": "^2.4.1",
-        "highlight.js": "^9.15.8",
+        "highlight.js": "^9.17.1",
         "highlightjs-line-numbers.js": "^2.7.0",
         "laravel-vue-pagination": "^2.3.0",
         "slick-carousel": "^1.8.1",
