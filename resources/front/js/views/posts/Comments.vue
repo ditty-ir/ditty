@@ -69,8 +69,13 @@
                     if (response.status == 1) {
                         this.items = response.data;
                     }
-
                 });
+            }
+        },
+        watch: {
+            '$route.params.id': function() {
+                this.loaded = false;
+                this.items = [];
             }
         }
     }
