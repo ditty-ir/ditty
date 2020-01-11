@@ -29,7 +29,7 @@ class Comment extends Model
         parent::boot();
 
         static::creating(function($comment) {
-            $comment->status = Auth::user()->isAuthor() ? self::STATUS_APPROVED : self::STATUS_PENDING;
+            $comment->status = (Auth::check() && Auth::user()->isAuthor()) ? self::STATUS_APPROVED : self::STATUS_PENDING;
         });
     }
 
