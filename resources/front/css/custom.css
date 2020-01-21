@@ -213,8 +213,12 @@ div.three-dots p {
     display: none;
 }
 
-.search-button {
+.l-0 {
     left: 0;
+}
+
+.r-0 {
+    right: 0;
 }
 
 div#post-comments p.text {

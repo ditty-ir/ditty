@@ -38,7 +38,7 @@
                                         <label class="custom-control-label" for="agree">با شرایط و قوانین موافقت میکنم</label>
                                     </div>
                                 </div>
-                                <div data-sitekey="6Lfiu7QUAAAAACc-NypXepF1qaSvQzzW0Ef2vwEA" class="g-recaptcha form-group"></div>
+                                <g-recaptcha></g-recaptcha>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">ثبت نام</button>
                                 </div>
@@ -58,9 +58,7 @@
 
         },
         created() {
-            let recaptcha = document.createElement('script');
-            recaptcha.setAttribute('src', "https://www.google.com/recaptcha/api.js?");
-            document.head.appendChild(recaptcha);
+            // this.$root.initializeCaptcha();
         },
         mounted() {
             if (this.$root.redirectIfAuthenticated()) {

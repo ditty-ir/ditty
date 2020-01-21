@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="base-url" content="{{ url('/') }}">
         <meta name="api-url" content="{{ url('/api/v1') }}">
+        <meta name="g-recaptcha-site_key" content="{{ env('NOCAPTCHA_SITEKEY') }}">
         <link href="{{ mix('css/front/app.css') }}" rel="stylesheet">
         @stack('styles')
         <script async src="https://cse.google.com/cse.js?cx=007996142488542406179:6kekve7blgf"></script>

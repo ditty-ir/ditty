@@ -19,9 +19,11 @@ export default [
         component: require('./views/auth/Register').default,
         name: 'register',
     },
-
-    // posts
-
+    {
+        path: '/contact',
+        component: require('./views/Contact').default,
+        name: 'contact',
+    },
     {
         path: '/posts',
         component: require('./views/posts/Index').default,

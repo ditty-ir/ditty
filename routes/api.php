@@ -58,6 +58,7 @@ Route::group(['namespace' => 'Api\v1\Front', 'prefix' => 'v1'], function() {
     });
 
     Route::get('/search', 'SearchController@search');
+    Route::post('/contact', 'ContactController@submit');
 
     Route::group(['prefix' => 'posts'], function() {
         Route::get('/', 'PostsController@index');

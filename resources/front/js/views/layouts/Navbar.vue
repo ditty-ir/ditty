@@ -5,7 +5,7 @@
                 <router-link class="navbar-brand p-0 nav-hider" :to="{ name: 'index' }">
                     <strong>{{ $root.document.appName }}</strong>
                 </router-link>
-                <div class="ml-4 mt-1 search-button position-absolute">
+                <div class="ml-4 mt-1 l-0 position-absolute">
                     <i
                         class="fa fa-search"
                         data-toggle="collapse"

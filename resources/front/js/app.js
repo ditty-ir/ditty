@@ -26,6 +26,7 @@ Vue.component('main-layout', require('./views/layouts/Main').default);
 Vue.component('avatar', require('./views/elements/avatar').default);
 Vue.component('post-link', require('./views/elements/post-link').default);
 Vue.component('author-link', require('./views/elements/author-link').default);
+Vue.component('g-recaptcha', require('./views/elements/g-recaptcha').default);
 Vue.component('blog-item-style5', require('./views/elements/blog-items/blog-item-style5').default);
 Vue.component('blog-item-style6', require('./views/elements/blog-items/blog-item-style6').default);
 Vue.component('blog-item-style7', require('./views/elements/blog-items/blog-item-style7').default);
