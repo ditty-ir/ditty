@@ -8,7 +8,7 @@
         </p>
         <div class="float-left">
             <a href="https://t.me/ditty_ir" target="_blank" class="color-tg ml-3"><i class="icon-telegram"></i></a>
-            <!-- <!-- <router-link :to="{ name: 'contact' }" class="text-primary ml-3"><i class="fa fa-phone"></i></router-link> --> -->
+            <!-- <router-link :to="{ name: 'contact' }" class="text-primary ml-3"><i class="fa fa-phone"></i></router-link> -->
             <a :href="$root.base_url + '/feed'" class="text-warning"><i class="fa fa-rss"></i></a>
         </div>
         <div class="clearfix"></div>
