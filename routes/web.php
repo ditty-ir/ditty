@@ -27,7 +27,7 @@ Route::group(['namespace' => 'Web\Front'], function() {
     Route::get('/tags/{tag}', 'HomeController@index');
     Route::get('/categories/{id}/{slug?}', 'HomeController@index');
     Route::get('/posts', 'HomeController@index');
-    Route::get('/contact', 'HomeController@index');
+    // Route::get('/contact', 'HomeController@index');
     Route::get('/preview/{post_id}', 'HomeController@index');
     Route::get('/p/{post_id}', 'ShortLinkController@index');
     Route::get('/feed', 'RssController@index');

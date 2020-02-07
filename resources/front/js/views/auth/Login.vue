@@ -24,7 +24,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">ورود</button>
+                                    <button type="submit" class="btn btn-primary btn-block">ورود</button>
                                 </div>
                             </form>
                         </div>

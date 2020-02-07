@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Api\v1\Front;
 
-use App\Classes\Response;
 use App\Mail\Contact;
-use Illuminate\Http\Request;
+use App\Classes\Response;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Requests\ContactRequest;

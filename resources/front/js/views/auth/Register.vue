@@ -40,7 +40,7 @@
                                 </div>
                                 <g-recaptcha></g-recaptcha>
                                 <div class="form-group">
-                                    <button type="submit" class="btn btn-primary btn-lg btn-block">ثبت نام</button>
+                                    <button type="submit" class="btn btn-primary btn-block">ثبت نام</button>
                                 </div>
                             </form>
                         </div>
