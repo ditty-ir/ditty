@@ -19,26 +19,28 @@
                 </div>
             </form>
         </b-card>
+
+
         <b-table id="posts" :items="posts.items.data" class="bg-white" :fields="table_fields">
-            <template slot="title" slot-scope="data">
+            <template v-slot:cell(title)="data">
                 <span v-on:click="handleFeatured(data.index)">
                     <i class="fa fa-star text-warning" v-if="data.item.featured"></i>
                     {{ data.item.title }}
                 </span>
             </template>
-            <template slot="edit" slot-scope="data">
+            <template v-slot:cell(edit)="data">
                 <router-link class="btn btn-primary" :to="{ name: 'dashboard.posts.edit', params: { post_id: data.item.hash_id } }"><i class="fa fa-edit"></i></router-link>
             </template>
-            <template slot="delete" slot-scope="data">
+            <template v-slot:cell(delete)="data">
                 <button class="btn btn-danger" v-on:click="deletePost(data.index)">×</button>
             </template>
-            <template slot="status" slot-scope="data">
+            <template v-slot:cell(status)="data">
                 <span :class="'badge badge-' + post_statuses[data.item.status].color">{{ post_statuses[data.item.status].title }}</span>
             </template>
-            <template slot="category" slot-scope="data">
+            <template v-slot:cell(category)="data">
                 {{ data.item.category.title }}
             </template>
-            <template slot="user" slot-scope="data">
+            <template v-slot:cell(user)="data"">
                 {{ data.item.user.name }}
             </template>
         </b-table>

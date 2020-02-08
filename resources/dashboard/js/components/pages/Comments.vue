@@ -6,19 +6,19 @@
             class="mt-5 bg-white table-bordered"
             :fields="table_fields"
         >
-            <template slot="text" slot-scope="data">
+            <template v-slot:cell(text)="data">
                 {{ data.item.text.limit(100) }}
             </template>
-            <template slot="edit" slot-scope="data">
+            <template v-slot:cell(edit)="data">
                 <button class="btn btn-primary" v-on:click="editComment(data.index)"><i class="fa fa-edit"></i></button>
             </template>
-            <template slot="delete" slot-scope="data">
+            <template v-slot:cell(delete)="data">
                 <button class="btn btn-danger" v-on:click="deleteComment(data.item.id)">×</button>
             </template>
-            <template slot="status" slot-scope="data">
+            <template v-slot:cell(status)="data">
                 <span :class="'badge badge-' + comment_statuses[data.item.status].color">{{ comment_statuses[data.item.status].title }}</span>
             </template>
-            <template slot="post" slot-scope="data">
+            <template v-slot:cell(post)="data">
                 <a
                     :href="$root.root_url + '/p/' + data.item.commentable.hash_id"
                     target="_blank"

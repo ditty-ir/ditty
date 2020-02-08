@@ -23,8 +23,8 @@ Vue.component('main-layout', require('./components/layouts/Main.vue').default);
 Vue.component('Pagination', Pagination);
 // Vue.directive('b-card', require('bootstrap-vue/es/components/card/card').default);
 
-Vue.component('b-modal', require('bootstrap-vue/esm/components/modal/modal').default);
-Vue.directive('b-modal', require('bootstrap-vue/esm/directives/modal/modal').default);
+// Vue.component('b-modal', require('bootstrap-vue/em/components/modal/modal').default);
+// Vue.directive('b-modal', require('bootstrap-vue/em/directives/modal/modal').default);
 
 Vue.component('multiselect', Multiselect);
 

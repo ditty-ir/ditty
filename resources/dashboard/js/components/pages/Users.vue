@@ -6,10 +6,10 @@
             class="mt-5 bg-white"
             :fields="table_fields"
         >
-            <template slot="edit" slot-scope="data">
+            <template v-slot:cell(edit)="data">
                 <button class="btn btn-primary" v-on:click="editUser(data.index)"><i class="fa fa-edit"></i></button>
             </template>
-            <template slot="delete" slot-scope="data">
+            <template v-slot:cell(delete)="data">
                 <button class="btn btn-danger" v-on:click="deleteUser(data.item.id)">×</button>
             </template>
         </b-table>

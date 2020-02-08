@@ -5,13 +5,13 @@
         </div>
 
         <b-table id="posts" :items="items" class="mt-5 bg-white" :fields="table_fields">
-            <template slot="edit" slot-scope="data">
+            <template v-slot:cell(edit)="data">
                 <button class="btn btn-primary" v-on:click="editGroup(data.index)"><i class="fa fa-edit"></i></button>
             </template>
-            <template slot="delete" slot-scope="data">
+            <template v-slot:cell(delete)="data">
                 <button class="btn btn-danger" v-on:click="deleteGroup(data.index)">×</button>
             </template>
-            <template slot="type" slot-scope="data">
+            <template v-slot:cell(type)="data">
                 {{ data.item.type == 'tag' ? 'برچسب' : 'دسته‌بندی' }}
             </template>
         </b-table>
