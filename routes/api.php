@@ -80,7 +80,7 @@ Route::group(['namespace' => 'Api\v1\Front', 'prefix' => 'v1'], function() {
     });
 
     Route::get('/tags/{tag}', 'TagsController@index');
-    Route::get('/users', 'UsersController@show');
+    Route::get('/users', 'UsersController@show')->middleware('cors');
 
     // Route::group(['middleware' => 'auth:api'], function() {
     //     Route::get('/profile', 'ProfileController@show');
