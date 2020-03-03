@@ -51,6 +51,11 @@ export default [
         name: 'dashboard.users'
     },
     {
+        path: '/dashboard/series',
+        component: require('./components/pages/Series.vue').default,
+        name: 'dashboard.series'
+    },
+    {
         path: '/dashboard/profile',
         component: require('./components/pages/Profile.vue').default,
         name: 'dashboard.profile'

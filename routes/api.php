@@ -30,6 +30,7 @@ Route::group(
                 Route::post('/', 'PostsController@store');
                 Route::post('/save-draft', 'PostsController@saveDraft');
                 Route::get('/get-draft', 'PostsController@getDraft');
+                Route::get('/published', 'PostsController@published');
                 Route::get('/{post}', 'PostsController@show');
                 Route::put('/{post}', 'PostsController@update');
                 Route::delete('/{post}', 'PostsController@destroy');
@@ -41,6 +42,7 @@ Route::group(
 
             // Route::post('/upload-image', 'PhotoUploadController@upload');
             Route::resource('/comments', 'CommentsController')->middleware('is_admin');
+            Route::resource('/series', 'SeriesController')->middleware('is_admin');
             Route::resource('/users', 'UsersController')->middleware('is_admin');
 
             Route::group(['prefix' => 'widgets', 'namespace' => '\App\Widgets'], function() {
@@ -81,6 +83,7 @@ Route::group(['namespace' => 'Api\v1\Front', 'prefix' => 'v1'], function() {
 
     Route::get('/tags/{tag}', 'TagsController@index');
     Route::get('/users', 'UsersController@show')->middleware('cors');
+    Route::get('/series/{id}', 'SeriesController@show');
 
     // Route::group(['middleware' => 'auth:api'], function() {
     //     Route::get('/profile', 'ProfileController@show');

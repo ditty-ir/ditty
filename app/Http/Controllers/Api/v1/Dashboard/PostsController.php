@@ -136,4 +136,9 @@ class PostsController extends Controller
     {
         return Auth::user()->isAdmin() || $post->user_id === Auth::id();
     }
+
+    public function published()
+    {
+        return response()->success('', $this->posts->published());
+    }
 }

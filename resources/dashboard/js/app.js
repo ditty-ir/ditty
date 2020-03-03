@@ -66,6 +66,9 @@ window.Vue = new Vue({
         isEmptyObject(object) {
             return $.isEmptyObject(object);
         },
+        postUrl(post) {
+            return this.root_url + '/p/' + post.hash_id;
+        },
         isAuthenticated() {
             return this.user !== null;
         },

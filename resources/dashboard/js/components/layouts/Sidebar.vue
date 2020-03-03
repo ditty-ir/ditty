@@ -28,6 +28,7 @@
                     <li><router-link class="nav-link" :to="{name: 'dashboard.pages'}" v-if="$root.isAdmin()">صفحات</router-link></li>
                 </ul>
             </li>
+            <li><router-link :to="{ name: 'dashboard.series' }" v-if="$root.isAdmin()"><i class="fas fa-fire"></i>سری‌ها</router-link></li>
             <li><router-link :to="{ name: 'dashboard.users' }" v-if="$root.isAdmin()"><i class="fas fa-fire"></i>کاربران</router-link></li>
             <li><router-link :to="{ name: 'dashboard.profile' }" v-if="$root.isAuthenticated()"><i class="fas fa-fire"></i> پروفایل</router-link></li>
           </ul>

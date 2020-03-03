@@ -64,7 +64,9 @@ class PostsController extends Controller
 
     public function relatedPosts(Post $post)
     {
-        $posts = $this->posts->related($post);
+        $posts = Cache::remember('related_' . $post->id, 3600, function() use ($post) {
+            return $this->posts->related($post);
+        });
 
         return Response::success('', $posts);
     }

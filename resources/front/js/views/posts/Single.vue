@@ -12,7 +12,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-8 col-md-offset-2 col-xs-12 text-right">
+                <div class="col-md-8 col-md-offset-2 col-xs-12 text-right" id="article">
                     <div v-if="isPage" class="mt-5"></div>
                     <div class="mainheading">
                         <user-card v-if="post.user && ! isPage" :user="post.user" />
@@ -26,6 +26,11 @@
                     <img v-if="post.cover_image" class="rounded featured-image img-fluid" :src="post.cover_image" :alt="post.title" :title="post.title">
                     <div v-if="post.brief_text" class="rounded bg-light p-3 mb-3">
                         <p class="m-0">{{ post.brief_text }}</p>
+                    </div>
+                    <div v-if="seriesItems.length > 0" class="series">
+                        <div class="list-group p-0 mt-3 mb-5">
+                            <post-link v-for="item in seriesItems" :class="'list-group-item' + (item.hash_id == post.hash_id ? ' active' : ' text-dark')" :post="item">{{ item.title }}</post-link>
+                        </div>
                     </div>
                     <div class="article-post" v-html="post.text"></div>
                     <div v-if="post.tags" class="mt-3">
@@ -52,7 +57,8 @@
         data() {
             return {
                 post: {},
-                isPage: false
+                isPage: false,
+                seriesItems: []
             }
         },
         components: {
@@ -70,6 +76,7 @@
         },
         methods: {
             loadPost() {
+
                 if (this.$route.params.path) {
                     var url = '/api/v1/posts/get-by-path/' + this.$route.params.path;
                     this.isPage = true;
@@ -84,8 +91,23 @@
                         this.post = result.data;
                         this.$root.setPageTitle(this.post.title);
                         this.initializePost();
+                        this.loadSeries();
                     }
                 );
+            },
+            loadSeries() {
+                this.seriesItems = [];
+                var series = this.post.in_series;
+
+                if (series) {
+                    let url = this.$root.api_url + '/series/' + series;
+
+                    $.get(url, (response) => {
+                        if (response.status == 1 && response.data !== null && Array.isArray(response.data)) {
+                            this.seriesItems = response.data;
+                        }
+                    });
+                }
             },
             scrollToComments() {
                 $('body, html').animate({ scrollTop: $('div#post-comments').offset().top }, "slow");

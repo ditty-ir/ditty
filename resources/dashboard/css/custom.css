@@ -55,3 +55,27 @@ body.modal-open .main-content {
     text-align: left;
     direction: ltr;
 }
+
+.multiselect__select {
+    left: 1px;
+    right: initial;
+}
+
+.multiselect {
+    text-align: right;
+}
+.multiselect__tags {
+    padding: 8px 8px 0 40px;
+}
+
+.multiselect__tag {
+    margin-left: 10px;
+    margin-right: initial;
+    padding: 4px 10px 4px 26px;
+}
+
+.multiselect__tag-icon {
+    left: 0;
+    right: initial;
+    margin: 0;
+}

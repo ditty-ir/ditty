@@ -31,7 +31,7 @@ class Post extends Model
     // protected $hidden = ['id'];
 
     protected $with = ['user', 'category'];
-    protected $appends = ['tags', 'hash_id', 'j_created_at', 'j_updated_at'];
+    protected $appends = ['tags', 'hash_id', 'j_created_at', 'j_updated_at', 'in_series'];
 
     public function getRouteKey()
     {
@@ -127,6 +127,13 @@ class Post extends Model
     public function getSlugAttribute()
     {
         return Str::slug($this->attributes['slug'], '-', null);
+    }
+
+    public function getInSeriesAttribute()
+    {
+        $item = SeriesPost::where('post_id', $this->id)->select('id', 'series_id')->first();
+
+        return $item ? $item->series_id : null;
     }
 
     public function getUrlAttribute()
